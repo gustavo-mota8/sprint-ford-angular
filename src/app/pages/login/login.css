@@ -1,0 +1,164 @@
+@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    background: url("/img/fundo-login.png"); 
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MARCA / TOPO */
+.marca {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   padding: 20px;
+   height: auto;
+   width: auto;
+}
+
+.marca img {
+    height: 50px;
+}
+
+.marca .linha {
+    width: 2px;
+    height: 35px;
+    background-color: white;
+}
+
+.marca span:last-child {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* CONTAINER PRINCIPAL (LADO A LADO) */
+.conteudo-principal {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around; /* Distribui imagem e form elegantemente */
+    padding: 20px;
+    flex-wrap: wrap; /* Faz o form descer de forma organizada SÓ se a tela for muito pequena (ex: celular) */
+}
+
+/* CONTAINER DA IMAGEM */
+.mustang {
+    max-width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.mustang img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 120px;
+    max-height: 500px; /* Mantém o limite de altura original */
+}
+
+main {
+
+
+    height: 85vh;
+
+}
+/* FORMULÁRIO RESPONSIVO */
+.formulario {
+    display: flex;
+    flex-direction: column; /* Organiza os itens de cima para baixo */
+    justify-content: center;
+    align-items: center;
+    padding: 40px; /* Garante espaço interno para o efeito de vidro */
+    width: 100%;
+    max-width: 600px; /* Tamanho perfeito para telas grandes, mas diminui em telas pequenas */
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 0, 0, 0.959);
+    box-shadow: 0 8px 32px 0 rgb(3, 0, 24);
+    border-radius: 40px;
+    box-sizing: border-box; /* Evita que o padding aumente o tamanho final do form */
+    height: 50vh;
+    
+}
+
+.formulario h1 {
+
+    color: white;
+    margin-bottom: 10px;
+    font-size: 25px;
+    text-align: left;
+ 
+
+}
+
+.formulario h2 {
+
+
+    color: gray;
+    font-weight: 300;
+    margin-bottom: 20px;
+
+}
+
+/* INPUTS FLUIDOS */
+.formulario input {
+
+    margin-bottom: 20px;
+    height: 35px;
+    width: 100%; 
+    min-width: 400px; 
+    border-radius: 5px;
+    background-color: rgb(40, 40, 43);
+    outline: none;
+    color: white;
+    border: 1px solid rgba(8, 7, 88, 0.959);
+    padding: 0px 10px; /* Espaço para o texto não colar na borda */
+    box-sizing: border-box;
+}
+
+.formulario input:hover {
+
+     box-shadow: 0 8px 32px 0 rgb(3, 0, 24);
+}
+
+.formulario .btn {
+    width: 100%;
+    min-width: 300px;
+    text-align: right;
+}
+
+.formulario button {
+    margin-top: 20px;
+    height: 40px;
+    width: 50%; 
+    color: white;
+    background-color: rgb(2, 2, 51);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: rgb(7, 7, 87);
+    
+}
+
+footer {
+
+    text-align: center;
+}
+footer span {
+
+    color: gray;
+    font-weight: 400;
+  
+  
+
+}

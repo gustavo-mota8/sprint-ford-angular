@@ -1,0 +1,76 @@
+
+body {
+
+    background-color: rgb(35, 35, 36);
+}
+.container-carro{
+
+    display: block;
+    text-align: center;
+    margin-top: 120px;
+
+   
+}
+
+#carro-ranger {
+ 
+    height: 600px;
+   
+    
+}
+
+
+
+.btn-menu {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+
+.menu-lateral {
+    position: fixed;
+    left: -250px;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background-color: rgb(26, 24, 24);
+
+    transition: 0.3s;
+}
+
+.menu-lateral nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.menu-lateral a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+    margin-left: 20px;
+    
+}
+
+.menu-lateral.aberto {
+
+    left: 0;
+}
+
+#logo-ford {
+
+
+    height: 80px;
+   
+   
+}
