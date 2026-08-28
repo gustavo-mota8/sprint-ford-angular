@@ -3,6 +3,13 @@ body {
 
     background-color: rgb(35, 35, 36);
 }
+
+main {
+
+    height: 80vh;
+}
+
+
 .container-carro{
 
     display: block;
@@ -74,3 +81,6 @@ body {
    
    
 }
+
+
+

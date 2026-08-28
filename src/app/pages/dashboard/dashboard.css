@@ -1,0 +1,86 @@
+
+
+header h1 {
+
+
+    font-size: 50px;
+    color: blue;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+
+
+main {
+
+    height: 85vh;
+}
+
+
+.veiculo {
+
+    color: black;
+    background-color: white;
+    border: solid 2px;
+    border-color: black;
+    width: 10%;
+    height: 130px;
+    
+
+}
+
+.veiculo select {
+
+
+    width: 50%;
+    
+}
+
+.veiculo th {
+
+    background-color: gray;
+}
+
+footer table {
+
+ 
+    background-color: rgb(1, 1, 102);
+    color: white;
+    width: 100%;
+    height: 80px;
+      
+}
+
+footer th {
+
+    padding: 10px;
+}
+
+
+.dadosCarro {
+
+   text-align: center;
+   background-color:white;
+   color: black;
+
+  
+}
+
+.dadosCarro input {
+
+    margin-top: 15px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.parte-inferior {
+
+
+  
+    background: rgb(1, 1, 102);
+    height: 10px;
+    
+}
+

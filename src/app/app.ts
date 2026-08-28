@@ -11,4 +11,5 @@ import { Home } from "./pages/home/home";
 })
 export class App {
   protected readonly title = signal('sprint-angular');
+  
 }
