@@ -17,30 +17,77 @@ main {
     height: 85vh;
 }
 
+.container-caixas {
+
+    display: flex;
+    justify-content: space-between;
+    
+}
 
 .veiculo {
 
-    color: black;
-    background-color: white;
-    border: solid 2px;
-    border-color: black;
-    width: 10%;
-    height: 130px;
-    
+    background-color: rgb(10, 12, 99);
+    width: 15%;
+    height: 200px;
+    margin: 0 0 0 20px;
+    border-radius: 15px;
+}
+
+.veiculo h3 {
+
+    color: white;
+    text-align: left;
+    background-color: rgb(53, 52, 52);
+    padding: 10px;
 
 }
 
 .veiculo select {
 
-
+    margin: 20px;
     width: 50%;
     
 }
 
-.veiculo th {
 
-    background-color: gray;
+.dashboard-caixas {
+
+    background-color: rgb(10, 12, 99);
+    width: 15%;
+    height: 200px;
+    margin: 0 0 10px 20px;
+    border-radius: 15px;
+
 }
+
+
+.dashboard-caixas h3 {
+
+    color: white;
+    text-align: left;
+    background-color: rgb(53, 52, 52);
+    padding: 10px;
+
+}
+
+.quantidades {
+
+    color: white;
+    font-size: 30px;
+    margin-left: 20px;
+
+    
+}
+
+
+.unidades {
+
+    color: gray;
+    font-size: 10px;
+}
+
+
+
 
 footer table {
 
