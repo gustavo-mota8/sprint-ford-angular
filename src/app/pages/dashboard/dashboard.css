@@ -20,7 +20,9 @@ main {
 .container-caixas {
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+
     
 }
 
@@ -45,9 +47,17 @@ main {
 .veiculo select {
 
     margin: 20px;
-    width: 50%;
+    height: 40px;
+    width: 70%;
+    color: blue;
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+    border-radius: 7px;
+    border: solid rgb(53, 52, 52);
+    outline: none;
     
 }
+
 
 
 .dashboard-caixas {

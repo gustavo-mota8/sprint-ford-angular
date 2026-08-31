@@ -1,0 +1,42 @@
+
+
+
+.btn-menu {
+
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+    color: white;
+
+  
+}
+
+
+.menu-lateral {
+
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    
+    
+}
+
+.menu-lateral nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.menu-lateral a {
+
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+    
+}
+
