@@ -21,6 +21,12 @@
     
 }
 
+.menu-lateral #logo-ford {
+
+    height: 70px;
+
+}
+
 .menu-lateral nav {
     display: flex;
     flex-direction: column;

@@ -71,8 +71,8 @@ main {
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: 40vh;
-    width: 30%;
+    height: 60vh;
+    width: 50%;
     background: rgba(255, 255, 255, 0.1); 
     backdrop-filter: blur(5px);
     border: 1px solid rgba(0, 0, 0, 0.959);
@@ -89,20 +89,32 @@ main {
     align-items: center;
     justify-content: center;
     height: 80vh;
+    
+}
+
+
+.bem-vindo img {
+
+
+    height: 80px;
+    margin-bottom: 10px;
 }
 
 .bem-vindo span {
 
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 40px;
+    font-weight: 500;
     color: white;
 
 }
 
+
+
 #forca {
 
-    font-size: 20px;
-    color: blue;
+    font-weight: 500;
+    font-size: 40px;
+    color: rgb(3, 3, 155);
     
 }
 
