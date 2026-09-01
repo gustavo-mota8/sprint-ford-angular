@@ -1,12 +1,16 @@
 
 body {
 
-    background-color: rgb(35, 35, 36);
+    
+    
 }
 
 main {
 
     height: 80vh;
+    
+    
+
 }
 
 
@@ -15,7 +19,7 @@ main {
     display: block;
     text-align: center;
     margin-top: 120px;
-
+  
    
 }
 
@@ -80,6 +84,28 @@ main {
     height: 80px;
    
    
+}
+
+.seja-bem-vindo {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 30px;
+    border-radius: 20px;
+    color: gray;
+
+    
+}
+
+#ford {
+
+    margin-left: 15px;
+    font-size: 50px;
+    color: rgb(3, 3, 155);
+    font-weight: bold;
+
 }
 
 
