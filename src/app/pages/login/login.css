@@ -162,3 +162,39 @@ footer span {
   
 
 }
+
+@media (max-width: 768px ){
+
+
+    .mustang img  {
+        
+        max-height: 600px;
+
+    }
+
+    .formulario {
+
+        width: 100%;
+    }
+    .formulario h1 {
+
+        text-align: center;
+        
+    }
+
+    .formulario h2 {
+
+        text-align: center;
+        font-size: 20px;
+}
+    .formulario input {
+
+        
+        min-width: 200px;
+    }
+    
+    footer span {
+
+        font-size: 12px;
+    }
+}
