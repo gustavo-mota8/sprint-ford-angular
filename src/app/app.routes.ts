@@ -4,7 +4,7 @@ import { Login } from './pages/login/login';
 import { Dashboard } from './pages/dashboard/dashboard';
 
 export const routes: Routes = [
-
+    
     {path: "", redirectTo: "login", pathMatch: "full"},
     {path:"home", component:Home },
     {path:"login", component:Login},

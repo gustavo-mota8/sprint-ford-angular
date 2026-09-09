@@ -23,6 +23,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+  
 
     
 }
@@ -143,6 +144,71 @@ footer th {
   
     background: rgb(1, 1, 102);
     height: 10px;
+    
+}
+
+@media (max-width: 768px) {
+
+    header h1 {
+
+        font-size: 30px;
+    }
+
+    .veiculo {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin-bottom: 20px;
+
+    }
+    .veiculo h3 {
+
+        font-size: 15px;
+    }
+
+    .container-caixas {
+
+        flex-direction: column;
+    }
+    .dashboard-caixas {
+
+        
+        width: 60%;
+        text-align: center;
+        margin-bottom: 20px;
+        
+    }
+
+    .dashboard-caixas h3 {
+
+        font-size: 15px;
+    }   
+
+    .titulosCarro th {
+
+      
+       
+
+    }
+
+    .dadosCarro td {
+
+   
+  
+        
+    }   
+
+
+
+    footer table {
+
+
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+      
+          
+    }
     
 }
 

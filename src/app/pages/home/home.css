@@ -1,28 +1,19 @@
 
 body {
 
- 
+    
     background: url("/img/fundo-home.png");
     background-size: 100%;
+    
 }
 
 main {
 
     height: 80vh;
 
-    
-
 }
 
 
-.container-carro{
-
-    display: block;
-    text-align: center;
-    margin-top: 120px;
-  
-   
-}
 
 #carro-ranger {
  
@@ -93,13 +84,6 @@ main {
 }
 
 
-.bem-vindo img {
-
-
-    height: 80px;
-    margin-bottom: 10px;
-}
-
 .bem-vindo span {
 
     font-size: 40px;
@@ -114,8 +98,32 @@ main {
 
     font-weight: 500;
     font-size: 40px;
-    color: rgb(3, 3, 155);
+    color: white;
     
+}
+
+@media (max-width: 768px) {
+
+    .bem-vindo {
+
+        height: 40vh;
+        width: 70%;
+       
+
+    }
+
+    .bem-vindo span {
+
+        font-size: 15px;
+
+   }
+   
+   #forca {
+
+    font-size: 15px;
+
+   }
+ 
 }
 
 

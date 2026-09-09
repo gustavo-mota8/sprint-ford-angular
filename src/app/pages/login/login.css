@@ -166,15 +166,21 @@ footer span {
 @media (max-width: 768px ){
 
 
+    .mustang {
+
+        max-width: 80%;
+    }
     .mustang img  {
         
-        max-height: 600px;
+       
+       margin-bottom: 20px;
 
     }
 
     .formulario {
 
         width: 100%;
+        height: 40vh;
     }
     .formulario h1 {
 

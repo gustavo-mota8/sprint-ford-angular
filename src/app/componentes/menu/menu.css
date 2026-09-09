@@ -25,7 +25,6 @@
 
     height: 70px;
    
-
 }
 
 .menu-lateral nav {
@@ -45,5 +44,21 @@
     font-weight: bold;
     margin-left: 20px;
     
+}
+
+
+@media (max-width: 768px) {
+
+
+   
+    .menu-lateral #logo-ford {
+       
+        width: 70%;
+
+    }
+    .menu-lateral a {
+
+        font-size: 15px;
+    }
 }
 
