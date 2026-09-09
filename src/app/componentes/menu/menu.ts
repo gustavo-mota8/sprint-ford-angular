@@ -20,7 +20,12 @@ export class Menu {
   var aside = document.querySelector(".menu-lateral");
 
 
-    
   } 
+
+  logout () {
+
+    sessionStorage.removeItem("logado");
+
+  }
 
 }

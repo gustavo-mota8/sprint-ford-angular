@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 export class Login {
 
 
+
   usuario = {
 
     nome: "",
@@ -32,6 +33,7 @@ export class Login {
         sessionStorage.setItem('logado', 'true');
         this.router.navigate(["/home"]);
 
+       
       },
 
       error: (err) => {
@@ -42,6 +44,8 @@ export class Login {
       }
     })
     
+   sessionStorage.removeItem("logado");
+
   }
 
 
