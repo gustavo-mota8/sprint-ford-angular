@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { Auth } from '../../services/auth';
 
 
 @Component({
@@ -17,15 +18,15 @@ export class Menu {
 
     this.elemento = !this.elemento;
 
-  var aside = document.querySelector(".menu-lateral");
-
 
   } 
 
-  logout () {
+  constructor (private auth: Auth) {}
 
-    sessionStorage.removeItem("logado");
+  logout(): void {
 
+    this.auth.logout();
+    
   }
 
 }

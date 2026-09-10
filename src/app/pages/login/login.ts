@@ -30,7 +30,6 @@ export class Login {
       next: (response) => {
 
 
-        sessionStorage.setItem('logado', 'true');
         this.router.navigate(["/home"]);
 
        

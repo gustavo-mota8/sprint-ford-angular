@@ -22,13 +22,17 @@
 
         <h3>Veiculos</h3>
 
-        <select class="selecao-veiculos"  >
+        <select class="selecao-veiculos" (change)="veiculoSelecionado($event)">
 
-            <option  value="" disabled>Escolha um Veículo</option>
-            <option  value="ranger">Ranger</option>
-            <option  value="mustang">Mustang</option>
-            <option  value="territory">Territory</option>
-            <option  value="bronco">Bronco Sport</option>
+            <option value="" hidden selected disabled>Escolha um Veículo</option>
+            <option *ngFor="let v of vehicles" [value]= "v.id">
+
+                {{v.vehicle}}
+
+            </option>
+            <option  value="Mustang">Mustang</option>
+            <option  value="Territory">Territory</option>
+            <option  value="Bronco Sport">Bronco Sport</option>
             
         </select>
         

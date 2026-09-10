@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Veiculo } from '../models/veiculo.model';
+import { Veiculo, Veiculos, VeiculosAPI } from '../models/veiculo.model';
 
 @Injectable({
   providedIn: 'root',
@@ -14,8 +14,8 @@ export class Vehicles {
   
   constructor (private http: HttpClient) {}
 
-  getVeiculos(): Observable <Veiculo[]> {
+  getVeiculos(): Observable<VeiculosAPI> {
 
-    return this.http.get<Veiculo[]>(this.apiUrl);
+    return this.http.get<VeiculosAPI>(`${(this.apiUrl)}/vehicles`);
   }
 }

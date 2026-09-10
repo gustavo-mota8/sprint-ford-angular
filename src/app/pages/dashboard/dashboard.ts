@@ -1,39 +1,52 @@
 import { Component } from '@angular/core';
 import { Menu } from "../../componentes/menu/menu";
-import { Veiculo } from '../../models/veiculo.model';
+import { Veiculo, VeiculosAPI } from '../../models/veiculo.model';
 import { Vehicles } from '../../services/vehicles';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [Menu],
+  imports: [Menu, CommonModule],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
 export class Dashboard {
 
 
-  public veiculos: Veiculo[]=[];
+  vehicles: Veiculo[]=[];
+
+  selecionado: Veiculo | null = null;
 
 
-  constructor (private vehicles: Vehicles) {}
 
-  buscarVeiculos (): void {
-
-    this.vehicles.getVeiculos().subscribe(
+  constructor (private vehicle: Vehicles) {}
 
 
-    (dadosRecebidos) => {
+  ngOnInit(): void {
 
-      this.veiculos = dadosRecebidos;
+    this.vehicle.getVeiculos().subscribe(
+      response => {
 
-    },
-    (erro) => {
-
-      console.error("Erro: " + erro);
-
-    })
-
+        this.vehicles = response.vehicles;
+      }
+    )
   }
-}
+  veiculoSelecionado(event: Event): void{
+
+    const idSelecionado = (event.target as HTMLSelectElement).value;
+    
+    if(idSelecionado) {
+      
+      this.selecionado = this.vehicles.find(v => v.id == Number (idSelecionado)) || null;
+    }
+    else {
+
+      this.selecionado = null;
+    }
+  }
+  
+  }
+
+
 
 
