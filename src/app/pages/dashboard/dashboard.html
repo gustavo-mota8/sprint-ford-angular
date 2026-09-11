@@ -5,6 +5,9 @@
 
 </head>
 
+<body>
+    
+
 <header>
 
     <app-menu></app-menu>
@@ -30,10 +33,7 @@
                 {{v.vehicle}}
 
             </option>
-            <option  value="Mustang">Mustang</option>
-            <option  value="Territory">Territory</option>
-            <option  value="Bronco Sport">Bronco Sport</option>
-            
+
         </select>
         
         
@@ -44,7 +44,7 @@
         <div class="dashboard-caixas">
 
             <h3>Total de Vendas</h3>
-            <span class="quantidades">1500</span>
+            <span class="quantidades">{{selecionado?.volumetotal || 0}} </span>
             <span class="unidades">Unid.</span>
 
         </div>
@@ -52,7 +52,7 @@
         <div class="dashboard-caixas">
 
             <h3>Conectados</h3>
-            <span class="quantidades">500</span>
+            <span class="quantidades">{{selecionado?.connected || 0}}</span>
             <span class="unidades">Unid.</span>
         
             
@@ -61,15 +61,20 @@
         <div class="dashboard-caixas"> 
 
             <h3>Update Software</h3>
-            <span class="quantidades">750</span>
+            <span class="quantidades">{{selecionado?.softwareUpdates || 0}}</span>
             <span class="unidades">Unid.</span>
 
         </div>
 
-    </div>
-        
-</main>
+      
 
+    </div>
+
+          <div [ngStyle]="containerImagemCarro">        
+            <img *ngIf="veiculoSelecionado" [src]= "selecionado?.img" [alt]= "selecionado?.vehicle" [ngStyle]="estiloImagemCarro" >
+        </div>
+</main>
+ 
 <footer> 
 
     <section class="tabela-carros">
@@ -114,3 +119,5 @@
     </section>
     
 </footer>
+
+</body>

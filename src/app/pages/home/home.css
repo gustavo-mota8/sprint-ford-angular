@@ -62,8 +62,8 @@ main {
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: 60vh;
-    width: 50%;
+    height: 40vh;
+    width: 40%;
     background: rgba(255, 255, 255, 0.1); 
     backdrop-filter: blur(5px);
     border: 1px solid rgba(0, 0, 0, 0.959);

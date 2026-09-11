@@ -3,12 +3,14 @@ import { Menu } from "../../componentes/menu/menu";
 import { Veiculo, VeiculosAPI } from '../../models/veiculo.model';
 import { Vehicles } from '../../services/vehicles';
 import { CommonModule } from '@angular/common';
+import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
   imports: [Menu, CommonModule],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
+
 })
 export class Dashboard {
 
@@ -44,8 +46,25 @@ export class Dashboard {
       this.selecionado = null;
     }
   }
+
+    containerImagemCarro = {
+
+    'display':  'flex',
+    'justify-content': 'center'
+
+  };
+
+    estiloImagemCarro = {
+
+    'height': '40vh',
+    'margin-top': '70px'
+    
+   
+  };
+}
   
-  }
+  
+ 
 
 
 
