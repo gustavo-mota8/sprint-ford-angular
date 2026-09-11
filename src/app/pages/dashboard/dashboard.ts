@@ -58,13 +58,13 @@ export class Dashboard {
 
     'height': '40vh',
     'margin-top': '70px'
+     
     
    
   };
 }
   
   
- 
 
 
 

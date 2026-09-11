@@ -71,7 +71,7 @@
     </div>
 
           <div [ngStyle]="containerImagemCarro">        
-            <img *ngIf="veiculoSelecionado" [src]= "selecionado?.img" [alt]= "selecionado?.vehicle" [ngStyle]="estiloImagemCarro" >
+            <img *ngIf="selecionado?.img" [src]= "selecionado?.img" [alt]="selecionado?.vehicle" [ngStyle]="estiloImagemCarro" >
         </div>
 </main>
  
