@@ -53,6 +53,8 @@
         display: flex;
         width: 10%;
         
+        
+        
 
     }
 
@@ -71,12 +73,14 @@
         padding: 20px;
         gap: 10px;
         
+        
     }
     .menu-lateral a {
 
         font-size: 13px;
         margin-left: 5px;
         margin-top: 10px;
+      
       
     }
 }

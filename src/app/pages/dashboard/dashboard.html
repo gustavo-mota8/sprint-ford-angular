@@ -97,21 +97,49 @@
 
         <tbody>
             
-            <tr class="dadosCarro">
+       <tr class="dadosCarro">
 
-            <input type="text" placeholder="insira o Código">
-            <td>5000km</td>
-            <td>90%</td>
-            <td>on</td>
-            <td>-12,23222</td>
-            <td>35,2314</td>
-        
-            </tr>
-            
-            <tr class="parte-inferior">
+    <td>
+        <input
+            type="text"
+            placeholder="Insira o Código VIN"
+            [(ngModel)]="vin"
+        >
 
-                
-            </tr>
+        <button (click)="buscarVeiculo()">
+            Buscar
+        </button>
+    </td>
+
+    <td>
+        {{ dadosVeiculo?.odometro || '-' }} km
+    </td>
+
+    <td>
+        {{ dadosVeiculo?.nivelCombustivel || '-' }}%
+    </td>
+
+    <td>
+        {{ dadosVeiculo?.status || '-' }}
+    </td>
+
+    <td>
+        {{ dadosVeiculo?.lat || '-' }}
+    </td>
+
+    <td>
+        {{ dadosVeiculo?.long || '-' }}
+    </td>
+
+</tr>
+
+<tr *ngIf="mensagemErro">
+
+    <td colspan="6">
+        {{ mensagemErro }}
+    </td>
+
+</tr>
       
         </tbody>
     </table>

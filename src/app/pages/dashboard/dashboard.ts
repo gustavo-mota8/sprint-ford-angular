@@ -1,18 +1,27 @@
 import { Component } from '@angular/core';
 import { Menu } from "../../componentes/menu/menu";
-import { Veiculo, VeiculosAPI } from '../../models/veiculo.model';
+import { Veiculo, VeiculosAPI, DadosVeiculo } from '../../models/veiculo.model';
 import { Vehicles } from '../../services/vehicles';
 import { CommonModule } from '@angular/common';
 import { ViewEncapsulation } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [Menu, CommonModule],
+  imports: [Menu, CommonModule, FormsModule],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 
 })
+
+
 export class Dashboard {
+
+vin: string = "";
+
+dadosVeiculo: DadosVeiculo | null = null;
+
+mensagemErro: string = "";
 
 
   vehicles: Veiculo[]=[];
@@ -62,6 +71,34 @@ export class Dashboard {
     
    
   };
+
+
+  buscarVeiculo(): void {
+
+  this.mensagemErro = "";
+
+  if (!this.vin.trim()) {
+    this.dadosVeiculo = null;
+    this.mensagemErro = "Insira um código VIN.";
+    return;
+  }
+
+this.vehicle.getDadosVeiculo(this.vin.trim()).subscribe({
+
+    next: (response) => {
+      this.dadosVeiculo = response;
+    },
+
+    error: (error) => {
+      this.dadosVeiculo = null;
+
+      this.mensagemErro =
+        error.error?.message || "Erro ao buscar o veículo.";
+    }
+
+  });
+
+}
 }
   
   
