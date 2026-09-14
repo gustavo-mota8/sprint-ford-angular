@@ -106,7 +106,12 @@ main {
     font-size: 10px;
 }
 
+.imagens {
 
+
+    margin-top: 50px;
+    height: 50vh;
+}
 
 
 footer table {
@@ -194,7 +199,15 @@ footer th {
     .dashboard-caixas h3 {
 
         font-size: 15px;
-    }   
+    }  
+    
+    .imagens {
+
+
+        height: 100px;
+        
+
+    }
 
 
     .titulosCarro {
