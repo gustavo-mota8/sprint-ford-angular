@@ -5,14 +5,14 @@
             <span (click)="mostrarElemento()">&#9776;</span>
 
                
-                <aside class="menu-lateral">
+                <aside class="menu-lateral" [class.aberto] ="elemento">
 
-                <nav  *ngIf="elemento">
+                <nav>
                 
                 <img id="logo-ford" src="img/logo-ford 2.0.png" alt="Logo Ford">
-                <a routerLink="/home">HOME</a>
-                <a routerLink="/dashboard">DASHBOARD</a>
-                <a (click)="logout()">LOGOUT</a>
+                <a routerLink="/home">Home</a>
+                <a routerLink="/dashboard">Dashboard</a>
+                <a (click)="logout()"><button>Logout &#10142;</button></a>
                 </nav>
             
                 </aside>

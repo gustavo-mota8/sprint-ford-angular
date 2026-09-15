@@ -8,8 +8,15 @@ import { Auth } from '../../services/auth';
   selector: 'app-menu',
   imports: [RouterLink, CommonModule],
   templateUrl: './menu.html',
-  styleUrl: './menu.css',
+  styleUrl: './menu.css'
+
 })
+
+
+
+
+
+
 export class Menu {
 
   elemento = false;
