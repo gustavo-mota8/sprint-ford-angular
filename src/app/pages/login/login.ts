@@ -21,7 +21,7 @@ export class Login {
 
   }
 
-  constructor(private auth: Auth, private router: Router){}
+  constructor(private auth: Auth, private router: Router) { }
 
   login() {
 
@@ -32,7 +32,7 @@ export class Login {
 
         this.router.navigate(["/home"]);
 
-       
+
       },
 
       error: (err) => {
@@ -42,8 +42,8 @@ export class Login {
 
       }
     })
-    
-   sessionStorage.removeItem("logado");
+
+    sessionStorage.removeItem("logado");
 
   }
 

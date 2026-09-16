@@ -1,5 +1,3 @@
-
-
 header h1 {
 
 
@@ -23,9 +21,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-  
 
-    
+
+
 }
 
 .veiculo {
@@ -61,14 +59,14 @@ main {
     border-radius: 7px;
     border: solid rgb(53, 52, 52);
     outline: none;
-    
+
 }
 
 
 
 .dashboard-caixas {
 
-   
+
     width: 15%;
     height: 200px;
     margin: 0 0 10px 20px;
@@ -96,7 +94,7 @@ main {
     font-size: 30px;
     margin-left: 20px;
 
-    
+
 }
 
 
@@ -116,32 +114,32 @@ main {
 
 footer table {
 
- 
-   
+
+
     color: white;
     width: 100%;
     height: 80px;
     backdrop-filter: blur(15px);
     border: 1px solid rgba(0, 0, 0, 0.959);
     box-shadow: 0 8px 32px 0 rgb(3, 0, 24);
-   
-      
+
+
 }
 
 footer th {
 
-    padding: 10px; 
+    padding: 10px;
     font-weight: 500;
 }
 
 
 .dadosCarro {
 
-   text-align: center;
-   background-color:white;
-   color: black;
+    text-align: center;
+    background-color: white;
+    color: black;
 
-  
+
 }
 
 .dadosCarro input {
@@ -155,10 +153,10 @@ footer th {
 .parte-inferior {
 
 
-  
+
     background: rgb(1, 1, 102);
     height: 10px;
-    
+
 }
 
 @media (max-width: 768px) {
@@ -166,17 +164,27 @@ footer th {
     header h1 {
 
         font-size: 30px;
-     
+
     }
 
     .veiculo {
+
+        width: 50%;
+        height: 120px;
         display: flex;
         flex-direction: column;
-        width: 60%;
         margin-bottom: 20px;
-        height: 150px;
+      
 
     }
+    
+    .veiculo select {
+
+        height: 30px;
+        width: 80%;
+        
+    }
+
     .veiculo h3 {
 
         font-size: 15px;
@@ -186,26 +194,36 @@ footer th {
 
         flex-direction: column;
     }
+
     .dashboard-caixas {
 
-        
-        width: 60%;
+
+        width: 50%;
         text-align: center;
         margin-bottom: 20px;
-        height: 130px;
+        height: 120px;
         
+
     }
 
     .dashboard-caixas h3 {
 
         font-size: 15px;
-    }  
+    }
+
+
+    .quantidades {
+
+        font-size: 20px;
+    }
+
     
     .imagens {
 
 
+        margin-top: 20px;
         height: 100px;
-        
+
 
     }
 
@@ -214,6 +232,7 @@ footer th {
 
         font-size: 10px;
     }
+
     .dadosCarro {
 
         font-size: 15px;
@@ -224,24 +243,31 @@ footer th {
     .dadosCarro input {
 
         width: 50px;
-    
+
 
     }
+
     .dadosCarro td {
 
         width: 200px;
         padding: 8px;
     }
 
+    .imagens {
+
+       margin-top: 0px;
+    }
+
     footer table {
 
 
-    float: inline-end;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-          
+        float: inline-end;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    
+
     }
     
-}
 
+}

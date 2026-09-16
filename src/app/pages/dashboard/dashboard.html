@@ -1,151 +1,146 @@
-
-<head> 
+<head>
 
     <title>Dashboard - Ford</title>
 
 </head>
 
 <body>
-    
-
-<header>
-
-    <app-menu></app-menu>
-    
-    <h1>Dashboard Ford</h1>
-
-</header>
 
 
-<main> 
+    <header>
 
-    <div class="container-caixas">
+        <app-menu></app-menu>
 
-        <div class="veiculo"> 
+        <h1>Dashboard Ford</h1>
 
-        <h3>Veiculos</h3>
+    </header>
 
-        <select class="selecao-veiculos" (change)="veiculoSelecionado($event)">
 
-            <option value="" hidden selected disabled>Escolha um Veículo</option>
-            <option *ngFor="let v of vehicles" [value]= "v.id">
+    <main>
 
-                {{v.vehicle}}
+        <div class="container-caixas">
 
-            </option>
+            <div class="veiculo">
 
-        </select>
-        
-        
-        
+                <h3>Veiculos</h3>
+
+                <select class="selecao-veiculos" (change)="veiculoSelecionado($event)">
+
+                    <option value="" hidden selected disabled>Escolha um Veículo</option>
+                    <option *ngFor="let v of vehicles" [value]="v.id">
+
+                        {{v.vehicle}}
+
+                    </option>
+
+                </select>
+
+
+
+            </div>
+
+
+            <div class="dashboard-caixas">
+
+                <h3>Total de Vendas</h3>
+                <span class="quantidades">{{selecionado?.volumetotal || 0}} </span>
+                <span class="unidades">Unid.</span>
+
+            </div>
+
+            <div class="dashboard-caixas">
+
+                <h3>Conectados</h3>
+                <span class="quantidades">{{selecionado?.connected || 0}} </span>
+                <span class="unidades">Unid.</span>
+
+
+            </div>
+
+            <div class="dashboard-caixas">
+
+                <h3>Update Software</h3>
+                <span class="quantidades">{{selecionado?.softwareUpdates || 0}} </span>
+                <span class="unidades">Unid.</span>
+
+            </div>
+
+
+
         </div>
 
-
-        <div class="dashboard-caixas">
-
-            <h3>Total de Vendas</h3>
-            <span class="quantidades">{{selecionado?.volumetotal || 0}} </span>
-            <span class="unidades">Unid.</span>
-
+        <div [ngStyle]="containerImagemCarro">
+            <img class="imagens" *ngIf="selecionado?.img" [src]="selecionado?.img" [alt]="selecionado?.vehicle">
         </div>
+    </main>
 
-        <div class="dashboard-caixas">
+    <footer>
 
-            <h3>Conectados</h3>
-            <span class="quantidades">{{selecionado?.connected || 0}}</span>
-            <span class="unidades">Unid.</span>
-        
-            
-        </div>
+        <section class="tabela-carros">
+            <table>
 
-        <div class="dashboard-caixas"> 
+                <thead>
 
-            <h3>Update Software</h3>
-            <span class="quantidades">{{selecionado?.softwareUpdates || 0}}</span>
-            <span class="unidades">Unid.</span>
+                    <tr class="titulosCarro">
 
-        </div>
+                        <th>Codigo-Vin</th>
+                        <th>Odômetro</th>
+                        <th>Nivel de combustivel</th>
+                        <th>Status</th>
+                        <th>Lat.</th>
+                        <th>Long.</th>
 
-      
+                    </tr>
 
-    </div>
+                </thead>
 
-          <div [ngStyle]="containerImagemCarro">        
-            <img class="imagens" *ngIf="selecionado?.img" [src]= "selecionado?.img" [alt]="selecionado?.vehicle"  >
-        </div>
-</main>
- 
-<footer> 
+                <tbody>
 
-    <section class="tabela-carros">
-    <table> 
+                    <tr class="dadosCarro">
 
-        <thead>
+                        <td>
+                            <input type="text" placeholder="Insira o Código VIN" [(ngModel)]="vin">
 
-         <tr class="titulosCarro">     
+                            <button (click)="buscarVeiculo()">
+                                Buscar
+                            </button>
+                        </td>
 
-            <th>Codigo-Vin</th> 
-            <th>Odômetro</th>
-            <th>Nivel de combustivel</th>
-            <th>Status</th>
-            <th>Lat.</th>
-            <th>Long.</th>
-        
-        </tr>  
-        
-        </thead>
+                        <td>
+                            {{ dadosVeiculo?.odometro || '-' }} km
+                        </td>
 
-        <tbody>
-            
-       <tr class="dadosCarro">
+                        <td>
+                            {{ dadosVeiculo?.nivelCombustivel || '-' }}%
+                        </td>
 
-    <td>
-        <input
-            type="text"
-            placeholder="Insira o Código VIN"
-            [(ngModel)]="vin"
-        >
+                        <td>
+                            {{ dadosVeiculo?.status || '-' }}
+                        </td>
 
-        <button (click)="buscarVeiculo()">
-            Buscar
-        </button>
-    </td>
+                        <td>
+                            {{ dadosVeiculo?.lat || '-' }}
+                        </td>
 
-    <td>
-        {{ dadosVeiculo?.odometro || '-' }} km
-    </td>
+                        <td>
+                            {{ dadosVeiculo?.long || '-' }}
+                        </td>
 
-    <td>
-        {{ dadosVeiculo?.nivelCombustivel || '-' }}%
-    </td>
+                    </tr>
 
-    <td>
-        {{ dadosVeiculo?.status || '-' }}
-    </td>
+                    <tr *ngIf="mensagemErro">
 
-    <td>
-        {{ dadosVeiculo?.lat || '-' }}
-    </td>
+                        <td colspan="6">
+                            {{ mensagemErro }}
+                        </td>
 
-    <td>
-        {{ dadosVeiculo?.long || '-' }}
-    </td>
+                    </tr>
 
-</tr>
+                </tbody>
+            </table>
 
-<tr *ngIf="mensagemErro">
+        </section>
 
-    <td colspan="6">
-        {{ mensagemErro }}
-    </td>
-
-</tr>
-      
-        </tbody>
-    </table>
-
-    </section>
-    
-</footer>
+    </footer>
 
 </body>
